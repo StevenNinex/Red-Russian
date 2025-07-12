@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="description" content="Una herramienta para generar contraseñas seguras." />
+        <meta name="author" content="Steven" />
+        <meta name="keywords" content="Contraseña, Generador, Seguridad, Red Russian" />
+        <link rel="stylesheet" href="style/style.css" />
+        <link rel="icon" href="image/logo.ico" type="image/ico" />
+        <title>Red Russian</title>
+        <script src="script/app.js"></script>
+    </head>
+    <body class="light">
+        <button id="toggle" onclick="ToggleColor()">Oscuro</button>
+        <header>
+            Red Russian
+        </header>
+        <section class="setup-range">
+            <h2>Monto de Caracteres</h2>
+            <input id="input-range" type="range" min="16" max="36" value="22">
+            <br />
+            <p>Longitud: <span id="range-value">22</span></p>
+        </section>
+        <section class="setup-charset">
+            <h2>Caracteres a Utilizar</h2>
+            <label for="setup-upper">
+                <input type="checkbox" id="setup-upper">
+                Mayúsculas
+            </label>
+            <br/>
+            <label for="setup-lower">
+                <input type="checkbox" id="setup-lower">
+                Minúsculas
+            </label>
+            <br/>
+            <label for="setup-number">
+                <input type="checkbox" id="setup-number">
+                Números
+            </label>
+            <br/>
+            <label for="setup-symbol">
+                <input type="checkbox" id="setup-symbol">
+                Símbolos
+            </label>
+        </section>
+        <section class="final-result">
+                Contraseña:
+                <input type="text" id="final-product" class="final-product" readonly>
+            <button onclick="GeneratePassword()" class="generate-button">Generar Contraseña</button>
+        </section>
+        <footer>
+            &copy Steven 2025.
+        </footer>
+    </body>
+</html>
